@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#hero{
+  width: 100%;
+
+  background-color: black;
+  color: #FFFFFF;
+}
+
+.center{
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+}
+
+.header1 {
+  font-family: 'Righteous', cursive;
+  font-size: 4.5vw;
+}
+
+
+
+.header4 {
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 1.4vw;
+}
+
+.hero p{
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.hero p span{
+  color: #555555;
+  font-weight: 500;
+}
+
+.image {
+  border-radius: 50%;
+}
+
+.hero .center a i{
+  color: #FFFFFF;
+}
+
+.icons {
+  padding-left: 10px;
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 2.8vw;
+  color: inherit;
+  margin: 0px 5px 0px 5px;
+  transition: 0.5s;
+}
+
+.hero .center .icons i:hover{
+  color: 
+  #9ccc9c ;
+}
+
+
+
+@media screen and (max-width: 785px) {
+  .header1 {
+    font-size: 8vw;
+  }
+  .icons {
+    font-size: 4vw;
+  }
+
+  .hero{
+    height: 50rem;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  body {
+    text-align: center;
+  }
+  .header1 {
+    font-size: 8vw;
+  }
+  .hero .center .lead{
+    font-size: 5.5vw;
+  }
+ 
+  
+}
+

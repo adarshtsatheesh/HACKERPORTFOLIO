@@ -1,208 +1,124 @@
 @import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
-.cursor-outline {body{
+body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: none;
-    background-color: #000;
+}
+
+#particles-js-hero{
+
+  background-color: #2C2C2C; /* Adjust as needed */
 
 }
 
-/* Cursor */
+#particles-js-background{
+  background-color: #2C2C2C; /* Adjust as needed */
 
-.cursor-dot {
-  width: 10px;
-  height: 10px;
-  background-color: white;
+
 }
 
-.cursor-outline {
-  width: 40px;
-  height: 40px;
-  border: 2px solid hsla(0, 0%, 100%, 0.5);
-}
-
-.cursor-dot,
-.cursor-outline {
-    position: fixed;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    z-index: 1;
-    pointer-events: none;
-}
-
-  /* Your existing styles */
-  transition: left 0.05s ease, top 0.05s ease;
-}
-
-
-
-#particles-js {
+#particles-js-background {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background-color: #2C2C2C; /* Adjust as needed */
-  z-index: -1;
+  z-index: -1; /* Ensure particles are behind other content */
 }
 
-/* hero */
- .hero .row .column-content-left img{
-    height: 360px;
-    width: 300px;
+#hero{
+  width: 100%;
+  color: #FFFFFF;
 }
 
-html, body {
-    height: 100%;
-}
+.center{
 
-.hero {
-    min-height: 100vh; /* Ensure hero section takes up the full viewport height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 
-/* Center content within columns */
-.column-content-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    height: 100%; /* Ensure content takes up full height of column */
-}
-
-.column-content-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100%; /* Ensure content takes up full height of column */
 }
 
 .header1 {
-    font-family: 'Righteous', cursive;
-    font-size: 4.5vw;
-    color: #FFFFFF;
-  }
+  font-family: 'Righteous', cursive;
+  font-size: 4.5vw;
+}
 
 
-  .header4 {
-    font-family: 'Ubuntu Mono', monospace;
-    font-size: 1.4vw;
-  }
-  
-  .hero p{
-    font-size: 1.6rem;
-    font-weight: 700;
-    padding-left: 5px;
-    color: #FFFFFF;
-  }
-  
-  .hero p span{
-    color: #FFFFFF;
-    font-weight: 500;
-  }
+
+.header4 {
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 1.4vw;
+}
+
+.hero p{
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.hero p span{
+  color: #555555;
+  font-weight: 500;
+}
+
+.image {
+  border-radius: 50%;
+}
+
+.hero .center a i{
+  color: #FFFFFF;
+}
+
+.icons {
+  padding-left: 10px;
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 2.8vw;
+  color: inherit;
+  margin: 0px 5px 0px 5px;
+  transition: 0.5s;
+}
+
+.hero .center .icons i:hover{
+  color: 
+  #9ccc9c ;
+}
 
 
-  .hero .image {
-    border-radius: 50%;
+
+@media screen and (max-width: 785px) {
+  .header1 {
+    font-size: 8vw;
   }
-  
-  .hero  a i{
-    color: #FFFFFF;
-  }
-  
   .icons {
-    padding-left: 10px;
-    font-family: 'Ubuntu Mono', monospace;
-    font-size: 2.8vw;
-    color: inherit;
-    margin: 0px 5px 0px 5px;
-    transition: 0.5s;
+    font-size: 4vw;
   }
-  
 
-  .hero  .icons i:hover{
-    color: 
-    #9ccc9c ;
+  .hero{
+    height: 50rem;
   }
-  
+}
 
-  @media screen and (max-width: 785px) {
-    .header1 {
-      font-size: 8vw;
-    }
-    .icons {
-      font-size: 4vw;
-    }
-  
-    .hero{
-      height: 50rem;
-    }
+@media screen and (max-width: 765px) {
+  body {
+    text-align: center;
   }
-  
-  @media screen and (max-width: 765px) {
-    body {
-      text-align: center;
-    }
-    .header1 {
-      font-size: 8vw;
-    }
-    .hero .center .lead{
-      font-size: 5.5vw;
-    }
-   
-    
+  .header1 {
+    font-size: 8vw;
   }
-  
-      @media screen and (max-width: 768px) {
-        .hero {
-            align-items: flex-start;
-            justify-content: flex-start;
-            min-height: auto;
-            padding-top: 50px; /* Adjust as needed */
-            padding-bottom: 50px; /* Adjust as needed */
-        }
-        .column-content-left,
-        .column-content-right {
-            align-items: center;
-            text-align: center;
-        }
-    }
+  .hero .center .lead{
+    font-size: 5.5vw;
+  }
 
-      /* Add this style */
-      @media screen and (max-width: 768px) {
-        .hero {
-            min-height: auto;
-            padding-top: 20px; /* Adjust as needed */
-            padding-bottom: 20px; /* Adjust as needed */
-        }
-    }
 
-      /* Add this style */
-      @media screen and (max-width: 768px) {
-        .hero {
-            min-height: auto;
-            padding-top: 20px; /* Adjust as needed */
-            padding-bottom: 20px; /* Adjust as needed */
-        }
-    }
-    @media screen and (max-width: 768px) {
-        .hero {
-            align-items: flex-start;
-            justify-content: flex-start;
-            min-height: auto;
-            padding-top: 50px; /* Adjust as needed */
-            padding-bottom: 50px; /* Adjust as needed */
-        }
-        .column-content-left,
-        .column-content-right {
-            align-items: center;
-            text-align: center;
-        }
-    }
+}
 
-    
+
+/* about */
+
+
+.about {
+  /* Adjust the positioning as needed */
+  position: relative;
+  z-index: 1; /* Ensure content is above particles */
+}

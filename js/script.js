@@ -41,3 +41,28 @@ window.addEventListener("mousemove", function (e) {
     
 });
 
+// skills
+
+
+
+var btn = document.getElementById('btn');
+var skillDiv = document.querySelector('.skill');
+var toolsDiv = document.querySelector('.tools');
+
+function toggleContent(content) {
+    if (content === 'skill') {
+        skillDiv.style.display = 'block';
+        toolsDiv.style.display = 'none';
+        btn.style.left = '0';
+        document.querySelector('.toggle-btn.active').classList.remove('active');
+        document.querySelector('.toggle-btn:nth-child(1)').classList.add('active');
+    } else if (content === 'tools') {
+        skillDiv.style.display = 'none';
+        toolsDiv.style.display = 'block';
+        btn.style.left = '110px';
+        document.querySelector('.toggle-btn.active').classList.remove('active');
+        document.querySelector('.toggle-btn:nth-child(2)').classList.add('active');
+    }
+}
+// Set initial state (Skill active)
+toggleContent('skill');

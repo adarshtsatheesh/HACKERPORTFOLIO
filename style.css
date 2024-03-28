@@ -3,6 +3,34 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: none;
+}
+
+/* Cursor */
+.cursor-dot {
+width: 10px;
+height: 10px;
+background-color: white;
+}
+.cursor-outline {
+width: 40px;
+height: 40px;
+border: 2px solid hsla(0, 0%, 100%, 0.5);
+}
+.cursor-dot,
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cursor-outline {
+/* Your existing styles */
+transition: left 0.05s ease, top 0.05s ease;
 }
 
 #particles-js-hero{

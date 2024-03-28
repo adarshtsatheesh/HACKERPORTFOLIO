@@ -12,7 +12,8 @@ body{
 }
 
 #particles-js-background{
-  background-color: #2C2C2C; /* Adjust as needed */
+  background-color:  #708090 ; /* Adjust as needed */
+  height: 100vh;
 
 
 }
@@ -29,6 +30,7 @@ body{
 #hero{
   width: 100%;
   color: #FFFFFF;
+  padding: 100px 0;
 }
 
 .center{
@@ -84,34 +86,29 @@ body{
   #9ccc9c ;
 }
 
-
-
-@media screen and (max-width: 785px) {
-  .header1 {
-    font-size: 8vw;
-  }
-  .icons {
-    font-size: 4vw;
-  }
-
-  .hero{
-    height: 50rem;
+/* Increase height for smaller devices */
+@media (max-width: 768px) {
+  #hero {
+    height: 500px; /* Adjust height for smaller devices */
   }
 }
 
-@media screen and (max-width: 765px) {
-  body {
-    text-align: center;
+/* Increase height for smaller devices */
+@media (max-width: 576px) {
+  #hero {
+    height: 600px; /* Adjust height for smaller devices */
   }
-  .header1 {
-    font-size: 8vw;
-  }
-  .hero .center .lead{
-    font-size: 5.5vw;
-  }
-
-
 }
+
+/* Additional adjustments for even smaller devices */
+@media (max-width: 400px) {
+  #hero {
+    height: 700px; /* Further adjust height for even smaller devices if needed */
+  }
+}
+
+
+
 
 
 /* about */
@@ -122,3 +119,151 @@ body{
   position: relative;
   z-index: 1; /* Ensure content is above particles */
 }
+
+
+
+/* About section */
+
+.about {
+  padding: 80px 0;
+  margin-bottom: 60px;
+}
+
+
+
+.about .row img {
+  height: 400px;
+  border-radius: 5px;
+
+  transition: transform 0.3s ease;
+  overflow: hidden;
+
+
+  --s: 15px; /* control the size */
+  padding: var(--s);
+  border: var(--s) solid #0000;
+  background: conic-gradient(from 90deg at 1px 1px,#0000 25%,#000 0);
+  clip-path: 
+    polygon(
+      0    0   ,33%  0   ,50% calc(2*var(--s))       ,66%  0,
+      100% 0   ,100% 33% ,calc(100% - 2*var(--s)) 50%,100% 66%,
+      100% 100%,66%  100%,50% calc(100% - 2*var(--s)),33%  100%,
+      0    100%,0    66% ,calc(2*var(--s)) 50%       ,0    33%
+    )
+}
+
+.about .row img:hover {
+  transform: scale(1.1);
+}
+
+
+
+.about p {
+  font-family: 'Roboto', sans-serif; /* Use Roboto font */
+  font-size: 1.1rem; /* Adjust font size as needed */
+  line-height: 1.6; /* Set line height for improved readability */
+  color: #666; /* Set text color */
+  text-align: justify; /* Justify text for a clean appearance */
+  margin-bottom: 30px; /* Add bottom margin for spacing */
+}
+
+.about .details-row h3{
+
+  color: #74a99c;
+  padding-bottom: 20px;
+  /* #b0cdc7 */
+}
+
+.about .details-row ul {
+  list-style: none; /* Remove default list-style */
+  font-family: 'Roboto',sans-serif;
+  font-size: 18px;
+}
+
+.about .details-row ul li{
+  padding-bottom: 10px;
+}
+
+.about .details-row ul li i{
+  padding-right: 8px;
+  color: #74a99c;
+}
+
+.about .details-row ul li strong{
+  color: #45505b;
+  padding-right: 10px;
+}
+
+.about .details-row ul li span{
+  color: #454648;
+}
+
+
+
+/* Skills */
+
+
+
+
+
+/* Default styles */
+
+
+/* Medium and large screens */
+@media (min-width: 768px) {
+  .card {
+    max-width: 420px; /* Set maximum width for cards */
+    margin-right: 15px; /* Adjust spacing between cards */
+    margin-left: 15px; /* Adjust spacing between cards */
+  }
+}
+
+@media (min-width: 992px) {
+  .card {
+    max-width: 320px; /* Set maximum width for cards */
+  }
+}
+
+
+/* Small screens */
+@media (max-width: 576px) {
+  .card {
+    max-width: 250px; 
+  }
+}
+
+
+.services {
+  padding: 100px 50px;
+}
+
+.services .cards-row .card {
+  padding: 30px;
+  background-color: #262626;
+  color: #FFFFFF;
+  height: 320px;
+  width: 100%; /* Make cards full width */
+  max-width: 400px; /* Set maximum width for cards */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Colored shadow */
+  transition: all 0.3s ease; /* Transition for smooth color change and hovering */
+  margin-bottom: 40px;
+}
+
+.services .cards-row .card:hover {
+  transform: translateY(-5px); /* Move up on hover */
+  background-color: #ff1d4e;
+}
+
+.services .cards-row .card .icon i {
+  font-size: 50px;
+  font-weight: 900;
+}
+
+
+
+/* Heading  */
+.heading-row{
+  
+}
+/* Heading */

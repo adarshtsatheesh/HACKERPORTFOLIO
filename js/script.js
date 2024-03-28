@@ -1,3 +1,10 @@
+// menu bar
+let toggle = document.querySelector('.toggle');
+let menu = document.querySelector('.menu');
+toggle.onclick = function(){
+    menu.classList.toggle('active')
+}
+
 // Animated Text Hero Section
 document.addEventListener('DOMContentLoaded', function(){
     const typed = document.querySelector('.typed');

@@ -33,6 +33,112 @@ border: 2px solid hsla(0, 0%, 100%, 0.5);
 transition: left 0.05s ease, top 0.05s ease;
 }
 
+/* menu bar */
+
+.menu-bar {
+  position: fixed;
+  bottom: 20px; /* Adjust this value as needed */
+  right: 20px; /* Adjust this value as needed */
+  z-index: 9999; /* Ensure it's above other content */
+}
+
+.menu-bar .menu{
+
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.menu-bar .menu li{
+  position: absolute;
+  left: 0;
+  list-style: none;
+  transform-origin: 100px;
+  transition: 0.5s;
+  transition-delay: calc(0.1s * var(--i));
+  transform: rotate(0deg) translateX(80px); 
+  /* tX = t-origin */
+
+}
+
+.menu-bar .menu.active li{
+
+  transform: rotate(calc(360deg / 8 * var(--i)));
+}
+
+.menu-bar .menu li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  transform: rotate(calc(360deg / 8 * var(--i)));
+  box-shadow: 0 3px 4px rgba(0,0,0,0.15);
+  color: #111;
+  transition: 0.5s;
+}
+
+.menu-bar .menu li a:hover{
+  color: #ff1252;
+}
+
+.menu-bar .toggle{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 4px rgba(0,0,0,0.15);
+  font-size: 2em;
+  transition: transform 1.25s;
+
+}
+
+.menu-bar .menu.active .toggle{
+  transform: rotate(315deg);
+}
+
+
+/* For screens smaller than 768px */
+@media screen and (max-width: 768px) {
+  .menu-bar {
+      display: none; /* Hide the menu bar on small screens */
+  }
+}
+
+/* For screens larger than 768px */
+@media screen and (min-width: 769px) {
+  .menu-bar {
+      position: fixed;
+      bottom: 20px; /* Adjust as needed */
+      right: 20px; /* Adjust as needed */
+      z-index: 9999;
+  }
+
+  .menu-bar .menu {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+}
+
+/* menu bar end */
+
+/* particle.js */
 #particles-js-hero{
 
   background-color: #2C2C2C; /* Adjust as needed */

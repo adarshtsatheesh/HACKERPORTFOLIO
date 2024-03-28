@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-body{
+
+.cursor-outline {body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -33,7 +34,6 @@ body{
     pointer-events: none;
 }
 
-.cursor-outline {
   /* Your existing styles */
   transition: left 0.05s ease, top 0.05s ease;
 }
@@ -50,7 +50,7 @@ body{
 
 /* hero */
  .hero .row .column-content-left img{
-    height: 450px;
+    height: 360px;
     width: 300px;
 }
 

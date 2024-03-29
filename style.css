@@ -24,7 +24,7 @@ border: 2px solid hsla(0, 0%, 100%, 0.5);
   left: 0;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  z-index: 100;
+  z-index: 9999;
   pointer-events: none;
 }
 
@@ -61,7 +61,7 @@ transition: left 0.05s ease, top 0.05s ease;
 /* menu bar */
 
 .menu-bar {
-  position: fixed;
+  position: block;
   bottom: 20px; 
   right: 20px; 
   z-index: 9999; /* Ensure it's above other content */
@@ -69,17 +69,17 @@ transition: left 0.05s ease, top 0.05s ease;
 
 .menu-bar .menu{
 
-  position: relative;
+  position: block;
   width: 200px;
   height: 200px;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
 
 }
 
 .menu-bar .menu li{
-  position: absolute;
+  position: block;
   left: 0;
   list-style: none;
   transform-origin: 100px;
@@ -96,7 +96,7 @@ transition: left 0.05s ease, top 0.05s ease;
 }
 
 .menu-bar .menu li a {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   width: 40px;
@@ -118,7 +118,7 @@ transition: left 0.05s ease, top 0.05s ease;
   width: 60px;
   height: 60px;
   background: #fff;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   z-index: 10000;
@@ -162,6 +162,40 @@ transition: left 0.05s ease, top 0.05s ease;
 }
 
 /* menu bar end */
+
+
+/* navbar */
+.menubar {
+  max-width: 30em;
+  display: flex;
+  position: fixed;
+  z-index: 100;
+  bottom: 30px; /* Adjust as needed to move the navbar up */
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: space-around;
+  padding: 16px 0;
+  background-color: #434343;
+  border-radius: 30px;
+}
+
+.menubar a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px #333333, -5px -5px 10px #555555;
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin: 0 10px; /* Add space between icons */
+}
+
+.menubar a:active {
+  box-shadow: 5px 5px #333333 inset, -5px -5px 10px #555555 inset;
+}
+/* navbar */
 
 /* particle.js */
 #particles-js-hero{

@@ -41,10 +41,9 @@ window.addEventListener("mousemove", function (e) {
     
 });
 
+
+
 // skills
-
-
-
 var btn = document.getElementById('btn');
 var skillDiv = document.querySelector('.skill');
 var toolsDiv = document.querySelector('.tools');
@@ -66,3 +65,4 @@ function toggleContent(content) {
 }
 // Set initial state (Skill active)
 toggleContent('skill');
+

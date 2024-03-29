@@ -29,7 +29,6 @@ border: 2px solid hsla(0, 0%, 100%, 0.5);
 }
 
 .cursor-outline {
-/* Your existing styles */
 transition: left 0.05s ease, top 0.05s ease;
 }
 
@@ -46,9 +45,9 @@ transition: left 0.05s ease, top 0.05s ease;
   font-weight: 900;
   font-size: 50px; 
     color:#FFF; 
-    text-transform: uppercase; /* Convert text to uppercase for emphasis */
-    letter-spacing: 2px; /* Add letter spacing for a stylish look */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    text-transform: uppercase;
+    letter-spacing: 2px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
   }
 
 
@@ -63,8 +62,8 @@ transition: left 0.05s ease, top 0.05s ease;
 
 .menu-bar {
   position: fixed;
-  bottom: 20px; /* Adjust this value as needed */
-  right: 20px; /* Adjust this value as needed */
+  bottom: 20px; 
+  right: 20px; 
   z-index: 9999; /* Ensure it's above other content */
 }
 
@@ -147,8 +146,8 @@ transition: left 0.05s ease, top 0.05s ease;
 @media screen and (min-width: 769px) {
   .menu-bar {
       position: fixed;
-      bottom: 20px; /* Adjust as needed */
-      right: 20px; /* Adjust as needed */
+      bottom: 20px;
+      right: 20px;
       z-index: 9999;
   }
 
@@ -167,12 +166,12 @@ transition: left 0.05s ease, top 0.05s ease;
 /* particle.js */
 #particles-js-hero{
 
-  background-color: #2C2C2C; /* Adjust as needed */
+  background-color: #2C2C2C; 
 
 }
 
 #particles-js-background{
-  background-color: #242627; /* Adjust as needed */
+  background-color: #242627;
   height: 100vh;
 
 
@@ -220,7 +219,7 @@ transition: left 0.05s ease, top 0.05s ease;
 }
 
 .hero p span{
-  color: #555555;
+  color: #b1a9a9;
   font-weight: 500;
 }
 
@@ -249,30 +248,26 @@ transition: left 0.05s ease, top 0.05s ease;
 /* Increase height for smaller devices */
 @media (max-width: 768px) {
   #hero {
-    height: 500px; /* Adjust height for smaller devices */
+    height: 500px; 
   }
 }
 
 /* Increase height for smaller devices */
 @media (max-width: 576px) {
   #hero {
-    height: 600px; /* Adjust height for smaller devices */
+    height: 600px;
   }
 }
 
 /* Additional adjustments for even smaller devices */
 @media (max-width: 400px) {
   #hero {
-    height: 700px; /* Further adjust height for even smaller devices if needed */
+    height: 700px;
   }
 }
 
 
-
-
-
 /* about */
-
 
 .about {
   padding: 50px;
@@ -282,21 +277,21 @@ transition: left 0.05s ease, top 0.05s ease;
 
 .about .content-row h3{
 
-  font-family: 'Roboto', sans-serif; /* Choose a professional font */
-    font-size: 24px; /* Adjust the font size as needed */
-    color: #FFFFFF; /* Royal Blue */
-    text-transform: uppercase; /* Convert text to uppercase for emphasis */
-    letter-spacing: 2px; /* Add letter spacing for a stylish look */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow */
-    margin-bottom: 20px; /* Add spacing below the heading */
+  font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    color: #FFFFFF; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
 
 }
 
 .about .content-row p{
-  font-family: 'Raleway', sans-serif; /* Choose a professional font */
-    font-size: 18px; /* Adjust the font size as needed */
-    color: #CCCCCC; /* Black */
-    line-height: 1.5; /* Set line height for better readability */
+  font-family: 'Raleway', sans-serif;
+    font-size: 18px; 
+    color: #CCCCCC; 
+    line-height: 1.5; 
 }
 
 .about .details-row ul{
@@ -351,9 +346,9 @@ transition: left 0.05s ease, top 0.05s ease;
 
 .skills p{
 
-  font-family: 'Raleway', sans-serif; /* Choose a professional font */
-    font-size: 18px; /* Adjust the font size as needed */
-    color: #CCCCCC; /* Black */
+  font-family: 'Raleway', sans-serif;
+    font-size: 18px; 
+    color: #CCCCCC; 
 
 }
 
@@ -363,8 +358,8 @@ transition: left 0.05s ease, top 0.05s ease;
   position: relative;
   border-radius: 30px;
   background: #303030;
-  display: flex; /* Add this line */
-  justify-content: space-between; /* Add this line */
+  display: flex; 
+  justify-content: space-between;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); 
 
 }
@@ -376,7 +371,7 @@ transition: left 0.05s ease, top 0.05s ease;
   outline: none;
   position: relative;
   text-align: center;
-  padding: 10px 20px; /* Adjusted padding */
+  padding: 10px 20px; 
 }
 .skills #btn{
   left: 0;
@@ -403,30 +398,24 @@ transition: left 0.05s ease, top 0.05s ease;
 }
 .skills .icon-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  grid-template-columns: repeat(4, 1fr); 
  
 }
 
 .skills .bg-shade{
   display: grid;
-  grid-template-rows: repeat(4, 30px); /* 4 columns */
-  grid-template-columns: repeat(4, 30px); /* 4 columns */
+  grid-template-rows: repeat(4, 30px);
+  grid-template-columns: repeat(4, 30px); 
 
 }
 .skills .bg-shade img {
-  width: 70px; /* Adjust the width of icons */
-  height: 70px; /* Adjust the height of icons */
+  width: 70px; 
+  height: 70px; 
   padding: 10px;
   background-color: #757575;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); 
   border-radius: 25%;
 }
-
-
-
-
-
-
 
 /* skills section end */
 
@@ -437,103 +426,63 @@ transition: left 0.05s ease, top 0.05s ease;
 
 
 /* services */
-/* services */
-.services {
+
+.service{
   height: 100vh;
+  color: #fff;
+  padding: 50px;
 }
 
-.services .row .carousel-inner {
-  height: 40vh; /* Increase the height of the carousel inner container */
-  width: 85vw;
-  margin: auto; /* Center the carousel */
+.service swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
 }
 
-.services .row .carousel-inner .carousel-item {
-  height: 100%; /* Set the carousel items to fill the carousel height */
+.service swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 400px;
 }
 
-.services .row .carousel-inner .carousel-item .cards {
-  display: flex;
-  justify-content: space-between;
-  height: 30vh; /* Make the cards fill the carousel item height */
+.service swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 200px
 }
 
-.services .row .carousel-inner .carousel-item .cards .card {
-  flex: 0 0 calc(30% - 20px); /* Adjust card width */
-  max-width: calc(30% - 20px); /* Adjust max-width */
-  padding: 20px; /* Add padding */
+
+:root {
+  --swiper-navigation-color: #fff;
+  --swiper-pagination-color: #fff; /* Pagination bullet color */
+}
+
+
+/* card */
+
+.card-article {
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+.service .card-data{
+  height: 200px;
+  background-color: #2e3136;
+  padding: 1.5rem 2rem;
+  text-align: center;
   position: relative;
-  border-radius: 10px;
-  overflow: hidden; /* Ensure overflow is hidden */
-  display: flex; /* Add display flex to center icon and title */
-  flex-direction: column; /* Align icon and title vertically */
-  justify-content: center; /* Center icon and title vertically */
-  text-align: center; /* Center text */
 }
 
-.services .row .carousel-inner .carousel-item .cards .card .icon i {
-  font-size: 50px;
-  font-weight: 900;
-  margin-bottom: 10px; /* Add margin below the icon */
+.service .card-name {
+  font-size:  1.5rem;
+  color: #76ABAE;
+  margin-bottom: .75rem;
 }
 
-.services .row .carousel-inner .carousel-item .cards .card .card-title,
-.services .row .carousel-inner .carousel-item .cards .card .card-text {
-  margin: 0; /* Remove default margin */
-}
-
-/* Media query for xs, sm, and md devices */
-@media screen and (max-width: 991.98px) {
-  .services .row .carousel-inner .carousel-item .cards {
-    justify-content: center; /* Center the cards on smaller devices */
-  }
-  
-  .services .row .carousel-inner .carousel-item .cards .card {
-    margin: 0 5px; /* Add margin on smaller devices */
-    flex: 0 0 calc(30% - 10px); /* Adjust card width for smaller devices */
-    max-width: calc(30% - 10px); /* Adjust max-width for smaller devices */
-  }
-}
-
-@media screen and (max-width: 767.98px) {
-  .services .row .carousel-inner .carousel-item .cards .card {
-    flex: 0 0 calc(30% - 5px); /* Further adjust card width for even smaller devices */
-    max-width: calc(30% - 5px); /* Further adjust max-width for even smaller devices */
-  }
-}
-
-@media screen and (max-width: 576.98px) {
-  .services .row .carousel-inner .carousel-item .cards .card {
-    flex: 0 0 calc(50% - 10px); /* Adjust card width for smallest devices */
-    max-width: calc(50% - 10px); /* Adjust max-width for smallest devices */
-  }
-}
-
-/* Media query for xs, sm, and md devices */
-@media screen and (max-width: 991.98px) {
-  .services .row .carousel-inner .carousel-item .cards .card .card-title,
-  .services .row .carousel-inner .carousel-item .cards .card .card-text {
-    font-size: 16px; /* Adjust font size for smaller screens */
-    line-height: 1.4; /* Adjust line height for smaller screens */
-  }
-}
-
-@media screen and (max-width: 767.98px) {
-  .services .row .carousel-inner .carousel-item .cards .card .card-title,
-  .services .row .carousel-inner .carousel-item .cards .card .card-text {
-    font-size: 14px; /* Adjust font size for smaller screens */
-  }
-}
-
-@media screen and (max-width: 576.98px) {
-  .services .row .carousel-inner .carousel-item .cards .card .card-title,
-  .services .row .carousel-inner .carousel-item .cards .card .card-text {
-    font-size: 10px; /* Adjust font size for smaller screens */
-  }
-
-  .services .row .carousel-inner .carousel-item .cards .card .icon i{
-
-    font-size: 30px; /* Adjust font size for smaller screens */
-
-  }
+.service .card-description {
+  font-weight: 500;
+  margin-bottom: 1.75rem;
+  color: #fff;
 }

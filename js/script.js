@@ -1,9 +1,4 @@
-// menu bar
-let toggle = document.querySelector('.toggle');
-let menu = document.querySelector('.menu');
-toggle.onclick = function(){
-    menu.classList.toggle('active')
-}
+
 
 // Animated Text Hero Section
 document.addEventListener('DOMContentLoaded', function(){
@@ -21,26 +16,58 @@ document.addEventListener('DOMContentLoaded', function(){
     }
   });
   
-// Cursor
-const cursorDot = document.querySelector(".cursor-dot");
-const cursorOutline = document.querySelector(".cursor-outline");
+    // Cursor
+    const cursorDot = document.querySelector(".cursor-dot");
+    const cursorOutline = document.querySelector(".cursor-outline");
 
-window.addEventListener("mousemove", function (e) {
-    const posX = e.clientX;
-    const posY = e.clientY;
+    window.addEventListener("mousemove", function (e) {
+        const posX = e.clientX;
+        const posY = e.clientY;
 
-    cursorDot.style.left = `${posX}px`;
-    cursorDot.style.top = `${posY}px`;
+        cursorDot.style.left = `${posX}px`;
+        cursorDot.style.top = `${posY}px`;
 
-    cursorOutline.style.left = `${posX}px`;
-    cursorOutline.style.top = `${posY}px`;
-    cursorOutline.animate({
-        left: '${posX}px',
-        top: '${posY}px'
-    }, {duration: 500, fill: "forwards"});
-    
-});
+        cursorOutline.style.left = `${posX}px`;
+        cursorOutline.style.top = `${posY}px`;
+        cursorOutline.animate({
+            left: '${posX}px',
+            top: '${posY}px'
+        }, { duration: 500, fill: "forwards" });
 
+    });
+
+
+
+    // making big
+    const cursor = document.querySelector('.cursor');
+        const links = document.querySelectorAll('ul li a');
+
+        links.forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                cursor.classList.add('big');
+                cursor.style.display = 'block'; // Show cursor when entering elements
+            });
+
+            link.addEventListener('mouseleave', () => {
+                cursor.classList.remove('big');
+                cursor.style.display = 'none'; // Hide cursor when leaving elements
+            });
+        });
+
+        const li = document.querySelector('li');
+
+        li.addEventListener('mouseenter', () => {
+            cursor.style.display = 'block'; // Show cursor when entering ul
+        });
+
+        li.addEventListener('mouseleave', () => {
+            cursor.style.display = 'none'; // Hide cursor when leaving ul
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.pageX + 'px';
+            cursor.style.top = e.pageY + 'px';
+        });
 
 
 // skills

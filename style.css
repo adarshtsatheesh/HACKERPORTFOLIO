@@ -6,17 +6,27 @@ body{
     cursor: none;
 }
 
+
+/* custom cursor */
+
+ul li a {
+  cursor: none;  
+}
+
+
 /* Cursor */
 .cursor-dot {
-width: 10px;
-height: 10px;
-background-color: white;
+  width: 10px;
+  height: 10px;
+  background-color: white;
 }
+
 .cursor-outline {
-width: 40px;
-height: 40px;
-border: 2px solid hsla(0, 0%, 100%, 0.5);
+  width: 40px;
+  height: 40px;
+  border: 2px solid hsla(0, 0%, 100%, 0.5);
 }
+
 .cursor-dot,
 .cursor-outline {
   position: fixed;
@@ -29,8 +39,29 @@ border: 2px solid hsla(0, 0%, 100%, 0.5);
 }
 
 .cursor-outline {
-transition: left 0.05s ease, top 0.05s ease;
+  transition: left 0.05s ease, top 0.05s ease;
 }
+
+
+/* big */
+.cursor {
+  display: none; /* Hide cursor by default */
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  transition: 0.1s;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  z-index: 9999;
+}
+
+.cursor.big {
+  transform: scale(4);
+}
+
+/* custom cursor */
 
 /* heading*/
 .heading-row{
@@ -58,110 +89,6 @@ transition: left 0.05s ease, top 0.05s ease;
 
 /* heading */
 
-/* menu bar */
-
-.menu-bar {
-  position: block;
-  bottom: 20px; 
-  right: 20px; 
-  z-index: 9999; /* Ensure it's above other content */
-}
-
-.menu-bar .menu{
-
-  position: block;
-  width: 200px;
-  height: 200px;
-  display: none;
-  justify-content: center;
-  align-items: center;
-
-}
-
-.menu-bar .menu li{
-  position: block;
-  left: 0;
-  list-style: none;
-  transform-origin: 100px;
-  transition: 0.5s;
-  transition-delay: calc(0.1s * var(--i));
-  transform: rotate(0deg) translateX(80px); 
-  /* tX = t-origin */
-
-}
-
-.menu-bar .menu.active li{
-
-  transform: rotate(calc(360deg / 8 * var(--i)));
-}
-
-.menu-bar .menu li a {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  background: #fff;
-  border-radius: 50%;
-  transform: rotate(calc(360deg / 8 * var(--i)));
-  box-shadow: 0 3px 4px rgba(0,0,0,0.15);
-  color: #111;
-  transition: 0.5s;
-}
-
-.menu-bar .menu li a:hover{
-  color: #ff1252;
-}
-
-.menu-bar .toggle{
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  background: #fff;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 10000;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 0 4px rgba(0,0,0,0.15);
-  font-size: 2em;
-  transition: transform 1.25s;
-
-}
-
-.menu-bar .menu.active .toggle{
-  transform: rotate(315deg);
-}
-
-
-/* For screens smaller than 768px */
-@media screen and (max-width: 768px) {
-  .menu-bar {
-      display: none; /* Hide the menu bar on small screens */
-  }
-}
-
-/* For screens larger than 768px */
-@media screen and (min-width: 769px) {
-  .menu-bar {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 9999;
-  }
-
-  .menu-bar .menu {
-      position: relative;
-      width: 200px;
-      height: 200px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-}
-
-/* menu bar end */
 
 
 /* navbar */

@@ -436,35 +436,104 @@ transition: left 0.05s ease, top 0.05s ease;
 
 
 
-
 /* services */
-
+/* services */
 .services {
-  padding: 100px 50px;
+  height: 100vh;
 }
 
-.services .cards-row .card {
-  padding: 30px;
-  background-color: #262626;
-  color: #FFFFFF;
-  height: 320px;
-  width: 100%; /* Make cards full width */
-  max-width: 400px; /* Set maximum width for cards */
+.services .row .carousel-inner {
+  height: 40vh; /* Increase the height of the carousel inner container */
+  width: 85vw;
+  margin: auto; /* Center the carousel */
+}
+
+.services .row .carousel-inner .carousel-item {
+  height: 100%; /* Set the carousel items to fill the carousel height */
+}
+
+.services .row .carousel-inner .carousel-item .cards {
+  display: flex;
+  justify-content: space-between;
+  height: 30vh; /* Make the cards fill the carousel item height */
+}
+
+.services .row .carousel-inner .carousel-item .cards .card {
+  flex: 0 0 calc(30% - 20px); /* Adjust card width */
+  max-width: calc(30% - 20px); /* Adjust max-width */
+  padding: 20px; /* Add padding */
+  position: relative;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Colored shadow */
-  transition: all 0.3s ease; /* Transition for smooth color change and hovering */
-  margin-bottom: 40px;
+  overflow: hidden; /* Ensure overflow is hidden */
+  display: flex; /* Add display flex to center icon and title */
+  flex-direction: column; /* Align icon and title vertically */
+  justify-content: center; /* Center icon and title vertically */
+  text-align: center; /* Center text */
 }
 
-.services .cards-row .card:hover {
-  transform: translateY(-5px); /* Move up on hover */
-  background-color: #ff1d4e;
-}
-
-.services .cards-row .card .icon i {
+.services .row .carousel-inner .carousel-item .cards .card .icon i {
   font-size: 50px;
   font-weight: 900;
+  margin-bottom: 10px; /* Add margin below the icon */
 }
 
+.services .row .carousel-inner .carousel-item .cards .card .card-title,
+.services .row .carousel-inner .carousel-item .cards .card .card-text {
+  margin: 0; /* Remove default margin */
+}
 
+/* Media query for xs, sm, and md devices */
+@media screen and (max-width: 991.98px) {
+  .services .row .carousel-inner .carousel-item .cards {
+    justify-content: center; /* Center the cards on smaller devices */
+  }
+  
+  .services .row .carousel-inner .carousel-item .cards .card {
+    margin: 0 5px; /* Add margin on smaller devices */
+    flex: 0 0 calc(30% - 10px); /* Adjust card width for smaller devices */
+    max-width: calc(30% - 10px); /* Adjust max-width for smaller devices */
+  }
+}
 
+@media screen and (max-width: 767.98px) {
+  .services .row .carousel-inner .carousel-item .cards .card {
+    flex: 0 0 calc(30% - 5px); /* Further adjust card width for even smaller devices */
+    max-width: calc(30% - 5px); /* Further adjust max-width for even smaller devices */
+  }
+}
+
+@media screen and (max-width: 576.98px) {
+  .services .row .carousel-inner .carousel-item .cards .card {
+    flex: 0 0 calc(50% - 10px); /* Adjust card width for smallest devices */
+    max-width: calc(50% - 10px); /* Adjust max-width for smallest devices */
+  }
+}
+
+/* Media query for xs, sm, and md devices */
+@media screen and (max-width: 991.98px) {
+  .services .row .carousel-inner .carousel-item .cards .card .card-title,
+  .services .row .carousel-inner .carousel-item .cards .card .card-text {
+    font-size: 16px; /* Adjust font size for smaller screens */
+    line-height: 1.4; /* Adjust line height for smaller screens */
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .services .row .carousel-inner .carousel-item .cards .card .card-title,
+  .services .row .carousel-inner .carousel-item .cards .card .card-text {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+
+@media screen and (max-width: 576.98px) {
+  .services .row .carousel-inner .carousel-item .cards .card .card-title,
+  .services .row .carousel-inner .carousel-item .cards .card .card-text {
+    font-size: 10px; /* Adjust font size for smaller screens */
+  }
+
+  .services .row .carousel-inner .carousel-item .cards .card .icon i{
+
+    font-size: 30px; /* Adjust font size for smaller screens */
+
+  }
+}

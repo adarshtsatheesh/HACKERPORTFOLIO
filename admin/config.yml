@@ -1,3 +1,11 @@
+backend:
+  name: github
+  repo: adarshtsatheesh/HACKERPORTFOLIO
+
+  media_folder: "static/assets/uploads"
+media_library:
+  name: "uploadcare"
+
 collections:
   - name: "blog"
     label: "Blog"

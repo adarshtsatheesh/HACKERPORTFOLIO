@@ -30,6 +30,9 @@
   <!-- swiper cdn-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+  <!-- ajax -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -434,7 +437,7 @@
 
           <div class="container-row">
 
-            <form id="submit-form" action="">
+            <form id="submit-form" method="POST" action="">
 
               <div class="input-group">
                 <ion-icon class="icon" name="person-outline"></ion-icon>
@@ -497,28 +500,29 @@
 
 
   <!-- submit -->
-  <script>
-    $("#submit-form").submit((e) => {
-      e.preventDefault()
-      $.ajax({
-        url: "https://script.google.com/macros/s/AKfycbx41y2aPACHQnEi0ZkQUnaQ5ikDWFRcKzOHxoNccSI3dyKHEq9i3wDRn048r6NSdfad/exec",
-        data: $("#submit-form").serialize(),
-        method: "post",
-        success: function (response) {
-          alert("Form submitted successfully")
-          window.location.reload()
-          //window.location.href="https://google.com"
-        },
-        error: function (err) {
-          alert("Something Error")
 
-        }
-      })
+  <script>
+    $("#submit-form").submit((e)=>{
+        e.preventDefault()
+        $.ajax({
+            url:"https://script.google.com/macros/s/AKfycbz6y5ajuH_YXyEwSn6_cfIFwq_h7aOIBUTIl0yuD8GlVCINhOsmosWXRoZS--zqPGA-/exec",
+            data:$("#submit-form").serialize(),
+            method:"post",
+            success:function (response){
+                alert("Form submitted successfully")
+                window.location.reload()
+                //window.location.href="https://google.com"
+            },
+            error:function (err){
+                alert("Something Error")
+
+            }
+        })
     })
-  </script>
+</script>
+
 
   <!-- ajax -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <!-- particles.js -->
   <script type="text/javascript" src="/js/particles.js"></script>

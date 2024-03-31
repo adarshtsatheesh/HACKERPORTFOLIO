@@ -58,6 +58,20 @@ ul li a {
   transform: scale(4);
 }
 
+@media (pointer: coarse) {
+  .cursor-big {
+    display: none;
+  }
+  .cursor {
+    display: none;
+  }
+  .cursor-outline {
+    display: none;
+  }
+  .cursor-dot {
+    display: none;
+  }
+}
 /* custom cursor */
 
 /* heading*/
@@ -296,6 +310,7 @@ ul li a {
 
 .about .img-about img {
   height: 400px;
+  margin-top: 130px;
   border-radius: 25%;
 }
 

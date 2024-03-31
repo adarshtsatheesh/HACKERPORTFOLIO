@@ -93,14 +93,14 @@
       <div class="row content-row">
         <div class="col-lg-7 " data-aos="slide-right" data-aos-delay="100" data-aos-duration="1000">
 
-          
+
 
           <div class="row">
 
             <div class="row heading-row">
               <h1 class="heading">About<span>Me</span></h1>
             </div>
-            
+
             <h3>Pentester / Bug Bounty Hunter</h3>
             <p>
 
@@ -398,24 +398,24 @@
               <p>Don't hesitate to reach out if you have any questions or need assistance. I'm here to help! .I'm
                 available to provide support and answer any inquiries you may have. Looking forward to connecting with
                 you!</p>
-            </div>    
+            </div>
 
             <div class="details">
               <div class="phone">
                 <ion-icon name="call-outline"></ion-icon>
                 <h3>Phone:</h3>
                 <p>+91 7907722992</p>
-  
+
               </div>
-  
+
               <div class="email">
                 <ion-icon name="mail-outline"></ion-icon>
                 <h3>Email:</h3>
                 <p>+91 7907722992</p>
-  
+
               </div>
             </div>
-           
+
 
           </div>
 
@@ -434,9 +434,8 @@
 
           <div class="container-row">
 
-            <form action="https://api.web3forms.com/submit" method="POST">
+            <form id="submit-form" action="">
 
-              <input type="hidden" name="access_key" value="bc5a9016-09a6-482a-86f6-3abd02f1cdae">
               <div class="input-group">
                 <ion-icon class="icon" name="person-outline"></ion-icon>
                 <input type="text" name="name" placeholder="eg: Tony Capo" class="contact-inputs" required>
@@ -481,10 +480,10 @@
 
   <footer class="footer">
     <div class="container text-center">
-        <h3>Adarsh T S</h3>
-        <p>&copy; Copyright Adarsh T S. All Rights Reserved</p>
+      <h3>Adarsh T S</h3>
+      <p>&copy; Copyright Adarsh T S. All Rights Reserved</p>
     </div>
-</footer>
+  </footer>
 
   <!-- Footer section ends -->
 
@@ -495,6 +494,31 @@
   <div class="cursor-outline" data-cursor-outline></div>
 
 
+
+
+  <!-- submit -->
+  <script>
+    $("#submit-form").submit((e) => {
+      e.preventDefault()
+      $.ajax({
+        url: "https://script.google.com/macros/s/AKfycbzsamgi5ogSjCrBBcwujNkMNDIjYcQa4yvV6gv30IZiHUbSSclslDCPfyYhQ3YBwvm1/exec",
+        data: $("#submit-form").serialize(),
+        method: "post",
+        success: function (response) {
+          alert("Form submitted successfully")
+          window.location.reload()
+          //window.location.href="https://google.com"
+        },
+        error: function (err) {
+          alert("Something Error")
+
+        }
+      })
+    })
+  </script>
+
+  <!-- ajax -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <!-- particles.js -->
   <script type="text/javascript" src="/js/particles.js"></script>

@@ -538,10 +538,17 @@ ul li a {
   color: #cbcbcb;
 }
 
+.contact .social-media .icons a i{
+
+  color: #d7d7d8;
+  font-size: 30px;
+
+}
+
 @media (max-width: 1200px) {
 
 .contact .icons{
-  font-size: 3vw;
+  font-size: 5vw;
 }
 }
 
@@ -562,9 +569,11 @@ ul li a {
 
 .contact .info .email:hover ion-icon,
 .contact .info .phone:hover ion-icon,
+.contact .social-media a:hover,
 .contact .social-media i:hover {
   color: #9ccc9c;
 }
+
 
 .container-row {
   background-color: transparent;
